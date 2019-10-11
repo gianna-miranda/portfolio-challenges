@@ -1,0 +1,469 @@
+body {
+    background: linear-gradient(rgba(216, 106, 220, 0.8), rgba(231, 192, 233, 0.8)), url(https://s3-us-west-1.amazonaws.com/pictureholder/6814511-victorian-wallpaper.jpg) center fixed;
+  }
+  
+  .title {
+    padding: 50px;
+    margin-bottom: -80px;
+    margin-top: -45px;
+  }
+  
+  .title h2 {
+    font-family: 'Abel', sans-serif;
+  }
+  
+  .title h4 {
+    font-family: 'Titillium Web', sans-serif;
+  }
+  
+  .shell {
+    margin: 70px auto;
+    text-align: center;
+    width: 400px;
+    height: 533px;
+    background-color: rgb(243, 238, 231);
+    border: 2px solid black;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.9), inset 0 0 15px rgba(0, 0, 0, 0.5); /*The first two values set the offset of the shadow, the third value is the amount of blur and the last value is the spread of the shadow*/
+  
+  
+    border-color: rgba(0, 0, 0, 0.2);
+    border-top-left-radius: 90%80px;
+    border-top-right-radius: 90%80px;
+    border-bottom-left-radius: 120%80px;
+    border-bottom-right-radius: 120%80px;
+  }
+  
+  .well {
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 23px;
+    width: 350px;
+    height: 70px;
+    background-color: rgb(212, 214, 199);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  #screen {
+    float: right;
+    margin-right: -5px;
+    line-height: 20px;
+    font-size: 320%;
+    font-family: 'Montserrat';
+  }
+  
+  .column1 h2 {
+    margin: 8px auto;
+    color: rgb(253, 253, 253);
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .column2 h2 {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .column3 h2 {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .column4 h2 {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .one1 {
+    position: absolute;
+    margin-top: 140px;
+    margin-left: 30px;
+    width: 70px;
+    height: 50px;
+    background-color: rgb(204, 64, 64);
+    border-top-left-radius: 80%10px;
+    border-top-right-radius: 80%10px;
+    border-bottom-left-radius: 100%10px;
+    border-bottom-right-radius: 100%10px;
+  }
+  
+  .two1 {
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 30px;
+    width: 70px;
+    height: 50px;
+    background-color: rgb(89, 91, 99);
+    border-top-left-radius: 80%10px;
+    border-top-right-radius: 80%10px;
+    border-bottom-left-radius: 100%10px;
+    border-bottom-right-radius: 100%10px;
+  }
+  
+  .three1 {
+    position: absolute;
+    margin-top: 260px;
+    margin-left: 30px;
+    width: 70px;
+    height: 50px;
+    background-color: rgb(89, 91, 99);
+    border-top-left-radius: 80%10px;
+    border-top-right-radius: 80%10px;
+    border-bottom-left-radius: 100%10px;
+    border-bottom-right-radius: 100%10px;
+  }
+  
+  .four1 {
+    position: absolute;
+    margin-top: 320px;
+    margin-left: 30px;
+    width: 70px;
+    height: 50px;
+    background-color: rgb(89, 91, 99);
+    border-top-left-radius: 80%10px;
+    border-top-right-radius: 80%10px;
+    border-bottom-left-radius: 100%10px;
+    border-bottom-right-radius: 100%10px;
+  }
+  
+  .five1 {
+    position: absolute;
+    margin-top: 380px;
+    margin-left: 30px;
+    width: 70px;
+    height: 50px;
+    background-color: rgb(89, 91, 99);
+    border-top-left-radius: 80%10px;
+    border-top-right-radius: 80%10px;
+    border-bottom-left-radius: 100%10px;
+    border-bottom-right-radius: 100%10px;
+  }
+  
+  .column2 h2 {
+    margin: 8px auto;
+    color: rgb(253, 253, 253);
+  }
+  
+  .one2 {
+    position: absolute;
+    margin-top: 140px;
+    margin-left: 120px;
+    width: 70px;
+    height: 50px;
+    background-color: rgb(204, 64, 64);
+    border-top-left-radius: 80%10px;
+    border-top-right-radius: 80%10px;
+    border-bottom-left-radius: 100%10px;
+    border-bottom-right-radius: 100%10px;
+  }
+  
+  .two2 {
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 120px;
+    width: 70px;
+    height: 50px;
+    background-color: rgb(89, 91, 99);
+    border-top-left-radius: 80%10px;
+    border-top-right-radius: 80%10px;
+    border-bottom-left-radius: 100%10px;
+    border-bottom-right-radius: 100%10px;
+  }
+  
+  .three2 {
+    position: absolute;
+    margin-top: 260px;
+    margin-left: 120px;
+    width: 70px;
+    height: 50px;
+    background-color: rgb(89, 91, 99);
+    border-top-left-radius: 80%10px;
+    border-top-right-radius: 80%10px;
+    border-bottom-left-radius: 100%10px;
+    border-bottom-right-radius: 100%10px;
+  }
+  
+  .four2 {
+    position: absolute;
+    margin-top: 320px;
+    margin-left: 120px;
+    width: 70px;
+    height: 50px;
+    background-color: rgb(89, 91, 99);
+    border-top-left-radius: 80%10px;
+    border-top-right-radius: 80%10px;
+    border-bottom-left-radius: 100%10px;
+    border-bottom-right-radius: 100%10px;
+  }
+  
+  .five2 {
+    position: absolute;
+    margin-top: 380px;
+    margin-left: 120px;
+    width: 70px;
+    height: 50px;
+    background-color: rgb(89, 91, 99);
+    border-top-left-radius: 80%10px;
+    border-top-right-radius: 80%10px;
+    border-bottom-left-radius: 100%10px;
+    border-bottom-right-radius: 100%10px;
+  }
+  
+  .column3 h2 {
+    margin: 8px auto;
+    color: rgb(253, 253, 253);
+  }
+  
+  .one3 {
+    position: absolute;
+    margin-top: 140px;
+    margin-left: 210px;
+    width: 70px;
+    height: 50px;
+    background-color: rgb(255, 113, 54);
+    border-top-left-radius: 80%10px;
+    border-top-right-radius: 80%10px;
+    border-bottom-left-radius: 100%10px;
+    border-bottom-right-radius: 100%10px;
+  }
+  
+  .two3 {
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 210px;
+    width: 70px;
+    height: 50px;
+    background-color: rgb(89, 91, 99);
+    border-top-left-radius: 80%10px;
+    border-top-right-radius: 80%10px;
+    border-bottom-left-radius: 100%10px;
+    border-bottom-right-radius: 100%10px;
+  }
+  
+  .three3 {
+    position: absolute;
+    margin-top: 260px;
+    margin-left: 210px;
+    width: 70px;
+    height: 50px;
+    background-color: rgb(89, 91, 99);
+    border-top-left-radius: 80%10px;
+    border-top-right-radius: 80%10px;
+    border-bottom-left-radius: 100%10px;
+    border-bottom-right-radius: 100%10px;
+  }
+  
+  .four3 {
+    position: absolute;
+    margin-top: 320px;
+    margin-left: 210px;
+    width: 70px;
+    height: 50px;
+    background-color: rgb(89, 91, 99);
+    border-top-left-radius: 80%10px;
+    border-top-right-radius: 80%10px;
+    border-bottom-left-radius: 100%10px;
+    border-bottom-right-radius: 100%10px;
+  }
+  
+  .five3 {
+    position: absolute;
+    margin-top: 380px;
+    margin-left: 210px;
+    width: 70px;
+    height: 50px;
+    background-color: rgb(255, 113, 54);
+    border-top-left-radius: 80%10px;
+    border-top-right-radius: 80%10px;
+    border-bottom-left-radius: 100%10px;
+    border-bottom-right-radius: 100%10px;
+  }
+  
+  .column4 h2 {
+    margin: 8px auto;
+    color: rgb(253, 253, 253);
+  }
+  
+  .one4 {
+    position: absolute;
+    margin-top: 140px;
+    margin-left: 300px;
+    width: 70px;
+    height: 50px;
+    background-color: rgb(255, 113, 54);
+    border-top-left-radius: 80%10px;
+    border-top-right-radius: 80%10px;
+    border-bottom-left-radius: 100%10px;
+    border-bottom-right-radius: 100%10px;
+  }
+  
+  .two4 {
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 300px;
+    width: 70px;
+    height: 50px;
+    background-color: rgb(255, 113, 54);
+    border-top-left-radius: 80%10px;
+    border-top-right-radius: 80%10px;
+    border-bottom-left-radius: 100%10px;
+    border-bottom-right-radius: 100%10px;
+  }
+  
+  .three4 {
+    position: absolute;
+    margin-top: 260px;
+    margin-left: 300px;
+    width: 70px;
+    height: 50px;
+    background-color: rgb(255, 113, 54);
+    border-top-left-radius: 80%10px;
+    border-top-right-radius: 80%10px;
+    border-bottom-left-radius: 100%10px;
+    border-bottom-right-radius: 100%10px;
+  }
+  
+  .four4 {
+    position: absolute;
+    margin-top: 320px;
+    margin-left: 300px;
+    width: 70px;
+    height: 110px;
+    background-color: rgb(255, 113, 54);
+    border-top-left-radius: 80%10px;
+    border-top-right-radius: 80%10px;
+    border-bottom-left-radius: 100%10px;
+    border-bottom-right-radius: 100%10px;
+  }
+  
+  .four4 h2 {
+    line-height: 80px;
+  }
+  
+  .column1 .clear {
+    border: 3px solid;
+    border-color: rgba(250, 250, 250, 0.3);
+    border-bottom-color: rgba(204, 64, 64, 0.7);
+    box-shadow: inset 0 0 5px rgba(250, 250, 250, 0.5);
+  }
+  
+  .column1 .seven {
+    border: 3px solid;
+    border-color: rgba(250, 250, 250, 0.3);
+    border-bottom-color: rgba(100, 100, 100, 0.9);
+    box-shadow: inset 0 0 5px rgba(240, 240, 240, 0.5);
+  }
+  
+  .column1 .four {
+    border: 3px solid;
+    border-color: rgba(250, 250, 250, 0.3);
+    border-bottom-color: rgba(100, 100, 100, 0.9);
+    box-shadow: inset 0 0 5px rgba(240, 240, 240, 0.5);
+  }
+  
+  .column1 .one {
+    border: 3px solid;
+    border-color: rgba(250, 250, 250, 0.3);
+    border-bottom-color: rgba(100, 100, 100, 0.9);
+    box-shadow: inset 0 0 5px rgba(240, 240, 240, 0.5);
+  }
+  
+  .column1 .zero {
+    border: 3px solid;
+    border-color: rgba(250, 250, 250, 0.3);
+    border-bottom-color: rgba(100, 100, 100, 0.9);
+    box-shadow: inset 0 0 5px rgba(240, 240, 240, 0.5);
+  }
+  
+  .column2 .del {
+    border: 3px solid;
+    border-color: rgba(250, 250, 250, 0.3);
+    border-bottom-color: rgba(204, 64, 64, 0.7);
+    box-shadow: inset 0 0 5px rgba(250, 250, 250, 0.5);
+  }
+  
+  .column2 .eight {
+    border: 3px solid;
+    border-color: rgba(250, 250, 250, 0.3);
+    border-bottom-color: rgba(100, 100, 100, 0.9);
+    box-shadow: inset 0 0 5px rgba(240, 240, 240, 0.5);
+  }
+  
+  .column2 .five {
+    border: 3px solid;
+    border-color: rgba(250, 250, 250, 0.3);
+    border-bottom-color: rgba(100, 100, 100, 0.9);
+    box-shadow: inset 0 0 5px rgba(240, 240, 240, 0.5);
+  }
+  
+  .column2 .two {
+    border: 3px solid;
+    border-color: rgba(250, 250, 250, 0.3);
+    border-bottom-color: rgba(100, 100, 100, 0.9);
+    box-shadow: inset 0 0 5px rgba(240, 240, 240, 0.5);
+  }
+  
+  .column2 .point {
+    border: 3px solid;
+    border-color: rgba(250, 250, 250, 0.3);
+    border-bottom-color: rgba(100, 100, 100, 0.9);
+    box-shadow: inset 0 0 5px rgba(240, 240, 240, 0.5);
+  }
+  
+  .column3 .mod {
+    border: 3px solid;
+    border-color: rgba(250, 250, 250, 0.3);
+    border-bottom-color: rgba(255, 113, 54, 0.5);
+    box-shadow: inset 0 0 5px rgba(250, 250, 250, 0.5);
+  }
+  
+  .column3 .nine {
+    border: 3px solid;
+    border-color: rgba(250, 250, 250, 0.3);
+    border-bottom-color: rgba(100, 100, 100, 0.9);
+    box-shadow: inset 0 0 5px rgba(240, 240, 240, 0.5);
+  }
+  
+  .column3 .six {
+    border: 3px solid;
+    border-color: rgba(250, 250, 250, 0.3);
+    border-bottom-color: rgba(100, 100, 100, 0.9);
+    box-shadow: inset 0 0 5px rgba(240, 240, 240, 0.5);
+  }
+  
+  .column3 .three {
+    border: 3px solid;
+    border-color: rgba(250, 250, 250, 0.3);
+    border-bottom-color: rgba(100, 100, 100, 0.9);
+    box-shadow: inset 0 0 5px rgba(240, 240, 240, 0.5);
+  }
+  
+  .column3 .equal {
+    border: 3px solid;
+    border-color: rgba(250, 250, 250, 0.3);
+    border-bottom-color: rgba(255, 113, 54, 0.5);
+    box-shadow: inset 0 0 5px rgba(250, 250, 250, 0.5);
+  }
+  
+  .column4 .divide {
+    border: 3px solid;
+    border-color: rgba(250, 250, 250, 0.3);
+    border-bottom-color: rgba(255, 113, 54, 0.5);
+    box-shadow: inset 0 0 5px rgba(250, 250, 250, 0.5);
+  }
+  
+  .column4 .mult {
+    border: 3px solid;
+    border-color: rgba(250, 250, 250, 0.3);
+    border-bottom-color: rgba(255, 113, 54, 0.5);
+    box-shadow: inset 0 0 5px rgba(250, 250, 250, 0.5);
+  }
+  
+  .column4 .minus {
+    border: 3px solid;
+    border-color: rgba(250, 250, 250, 0.3);
+    border-bottom-color: rgba(255, 113, 54, 0.5);
+    box-shadow: inset 0 0 5px rgba(250, 250, 250, 0.5);
+  }
+  
+  .column4 .plus {
+    border: 3px solid;
+    border-color: rgba(250, 250, 250, 0.3);
+    border-bottom-color: rgba(255, 113, 54, 0.5);
+    box-shadow: inset 0 0 5px rgba(250, 250, 250, 0.5);
+  }
