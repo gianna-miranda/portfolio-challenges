@@ -1,202 +1,149 @@
-import 
-React from 
-'react';
+import React from 'react';
+import '../src/App.css'
+import ReplyForm from '../src/components/ReplyForm/ReplyForm'
+import RepliedComment from '../src/components/RepliedComments/RepliedComment';
+class App extends React.Component  {
+  
+  state = {
+    comments: [],
+    commentDescription: ''
+  }
+  
+  getUserComment = (event) => {
+    this.setState({
+      commentDescription: event.target.value
+    })
+  }  
+  
+  submitComment = () => {
+    console.log(this.state.commentDescription)
+    const commentsCopy = [...this.state.comments] //copy of comments array
+    const commentsObj = {
+      commentDescription: this.state.commentDescription,
+      likes: 0,
+      dislikes: 0,
+      replies:[],
+      showReplyForm:false
+    }
+    commentsCopy.push(commentsObj)
+    this.setState({
+      comments: commentsCopy
+    })
+  }
 
-import 
-logo from 
-'./logo.svg';
+   deleteComment = (index) => {
+    console.log(index)
+    const commentsCopy = [...this.state.comments]
+    commentsCopy.splice(index, 1)
+    this.setState({
+      comments:commentsCopy
+    })
+  }
 
-import 
-CommentForm from 
-'./Components/CommentForm/CommentForm';
+  likesComment = (index) => {
+    console.log(index)
+    const commentsCopy = [...this.state.comments]
+    commentsCopy[index].likes += 1
+    this.setState({commets: commentsCopy})
+  }
 
-import 
-Comment from 
-'./Components/Comment/Comment';
+  dislikesComment = (index) => {
+    console.log(index)
+    const commentsCopy = [...this.state.comments]
+    commentsCopy[index].dislikes +=1
+    this.setState({ comments:commentsCopy})
+  }
 
-import 
-'./App.css';
+  showReplyForm = (index) => {
+    const commentsCopy = [...this.state.comments]
+    commentsCopy[index].showReplyForm = !commentsCopy[index].showReplyForm
+    this.setState({comments:commentsCopy})
+  }
+
+  submitReplyComment = (event, index) => {
+    console.log(event.target.previousSibling.value)
+    const commentsCopy = [...this.state.comments]
+    const commentsObj = {
+      commentDescription: event.target.previousSibling.value,
+      likes: 0,
+      dislikes: 0,
+    }
+    commentsCopy[index].replies.push(commentsObj)
+    commentsCopy[index].showReplyForm = !commentsCopy[index].showReplyForm
+    this.setState({comments: commentsCopy})
+  }
+
+  likeRepliedComment = (indexToOriginalComment, indexToRepliedComment) => {
+    const commentsCopy = [...this.state.comments]
+    commentsCopy[indexToOriginalComment].replies[indexToRepliedComment].likes += 1
+    this.setState({commets: commentsCopy})
+  }
+
+  dislikeRepliedComment = (indexToOriginalComment, indexToRepliedComment) => {
+    const commentsCopy = [...this.state.comments]
+    commentsCopy[indexToOriginalComment].replies[indexToRepliedComment].dislikes += 1
+    this.setState({commets: commentsCopy})
+  }
+
+  deleteRepliedComment = (indexToOriginalComment, indexToRepliedComment) => {
+    const commentsCopy = [...this.state.comments]
+    commentsCopy[indexToOriginalComment].replies.splice(indexToRepliedComment, 1)
+    this.setState({
+      comments:commentsCopy
+    })
+  }
 
 
 
-class 
-App extends 
-React.Component {
+  render(){
+    const {comments} = this.state
+    const allComments = comments.map((commentObj, originalCommentIndex) => {
+        return (
+          <>
+          <div key={commentObj.commentDescription+originalCommentIndex}>
+            {commentObj.commentDescription}
+            <button onClick={() => this.likesComment(originalCommentIndex)}>Like</button>
+            <p>{commentObj.likes}</p>
+            <button onClick={() => this.dislikesComment(originalCommentIndex)}>Dislike</button>
+            <p>{commentObj.dislikes}</p>
+            <button onClick={() => this.showReplyForm(originalCommentIndex)}>Reply</button>
+            <button onClick={() => this.deleteComment(originalCommentIndex)}>Delete</button>
+          </div>
+          {commentObj.replies.map((repliedCommentObj, repliedCommentIndex) => {
+            return(
+              <RepliedComment 
+                originalCommentIndex={originalCommentIndex}
+                repliedCommentObj={repliedCommentObj} 
+                repliedCommentIndex={repliedCommentIndex} 
+                likeRepliedComment={this.likeRepliedComment}
+                dislikeRepliedComment={this.dislikeRepliedComment}
+                deleteRepliedComment={this.deleteRepliedComment}
+                />
+            )
+          })}
+          {commentObj.showReplyForm && (
+            <ReplyForm index={originalCommentIndex} submitReplyComment={this.submitReplyComment}/>
+          )}
+          </>
+        )
+    })
 
-constructor() {
 
-super();
-
-
-this.state = {
-
-showComments: 
-false,
-
-comments: [
-
-{id: 
-1, author: 
-"", body: 
-""},
-
-
-]
-
-};
-
+     return (
+       <div>
+         <form>
+           <textarea onChange={this.getUserComment} 
+            type="text" className="comment-box" />
+           <button onClick={this.submitComment} type="button">Submit</button>
+         </form>
+         <div>{allComments.length > 0 ? allComments : 'No comments yet.'}</div> {/* ternary */}
+       </div>
+         
+     )
+  }
+ 
 }
 
-
-render () {
-
-const 
-comments = this._getComments();
-
-let 
-commentNodes;
-
-let 
-buttonText = 'Show Comments';
-
-
-if (this.state.showComments) {
-
-buttonText = 
-'Hide Comments';
-
-commentNodes = 
-<div 
-className="comment-list">{comments}</div>;
-
-}
-
-
-return(
-
-<div
-className="comment-box">
-
-<h2>Join the Discussion!</h2>
-
-<CommentForm
-addComment={this._addComment.bind(this)}/>
-
-<button
-id="comment-reveal"
-onClick={this._handleClick.bind(this)}>
-
-{buttonText}
-
-</button>
-
-<h3>Comments</h3>
-
-<h4
-className="comment-count">
-
-{this._getCommentsTitle(comments.length)}
-
-</h4>
-
-{commentNodes}
-
-</div>
-
-);
-
-} // end render
-
-
-_addComment(author,
-body) {
-
-const 
-comment = {
-
-id: 
-this.state.comments.length +
-1,
-
-author,
-
-body
-
-};
-
-this.setState({
-comments: 
-this.state.comments.concat([comment]) });
-// *new array references help React stay fast, so concat works better than push here.
-
-}
-
-
-_handleClick() {
-
-this.setState({
-
-showComments: !this.state.showComments
-
-});
-
-}
-
-
-_getComments() { 
-
-return 
-this.state.comments.map((comment)
-=> { 
-
-return (
-
-<Comment
-
-author={comment.author}
-
-body={comment.body}
-
-key={comment.id}
-/>
-
-); 
-
-});
-
-}
-
-
-_getCommentsTitle(commentCount) {
-
-if (commentCount ===
-0) {
-
-return 
-'No comments yet';
-
-} else 
-if (commentCount === 
-1) {
-
-return 
-"1 comment";
-
-} else {
-
-return 
-`${commentCount} comments`;
-
-}
-
-}
-
-} // end CommentBox component
-
-
-
-
-export 
-default App;
+export default App;
 
 
